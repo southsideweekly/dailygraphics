@@ -1,6 +1,10 @@
 *.py[co]
 *.sw[op]
 
+.env
+.venv
+.vscode
+
 # Packages
 *.egg
 *.egg-info
