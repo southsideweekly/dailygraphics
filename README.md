@@ -68,7 +68,7 @@ The following things are assumed to be true in this documentation.
 
 * You are running OSX.
 * You are using Python 2.7. (Probably the version that came with OSX.)
-* You have [virtualenv](https://pypi.python.org/pypi/virtualenv) and [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) installed and working.
+* You have [Pipenv](https://github.com/pypa/pipenv) installed and working ([instructions here](https://github.com/pypa/pipenv#installation)).
 * You have your Amazon Web Services credentials stored as environment variables locally.
 
 For more details on the technology stack used with this project, see our [development environment blog post](http://blog.apps.npr.org/2013/06/06/how-to-setup-a-developers-environment.html).
@@ -105,8 +105,7 @@ Then set up the project like this:
 ```
 git clone https://github.com/nprapps/dailygraphics.git
 cd dailygraphics
-mkvirtualenv dailygraphics
-pip install -r requirements.txt
+pipenv install --two
 npm install
 ```
 
@@ -174,7 +173,7 @@ Run The Project
 A Flask app is used to run the project locally. It will automatically recompile templates on-demand.
 
 ```
-workon dailygraphics
+pipenv shell
 fab app
 ```
 
